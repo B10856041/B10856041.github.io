@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,shrink-to-fit=no">
+    <title>menu</title>
+    <style type="text/css">
+        * {
+            /*消除網頁邊框*/
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        
+        .header {
+            height: 50px;
+            background-color: #000;
+            position: relative;
+        }
+        
+        .btn {
+            width: 40px;
+            height: 40px;
+            background-color: #000;
+            display: block;
+            position: absolute;
+            top: 5px;
+            right: 10px;
+        }
+        
+        .btn span {
+            opacity: 0;
+            width: 1px;
+            height: 1px;
+            display: block;
+            overflow: hidden;
+        }
+        
+        .btn::before {
+            content: '';
+            position: absolute;
+            height: 2px;
+            left: 2px;
+            width: 36px;
+            background-color: #aaa;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            box-shadow: 0px 8px 0px #aaa, 0px -8px 0px #aaa;
+        }
+        
+        nav {
+            width: 40%;
+            height: 100vh;
+            background-color: #282923;
+            position: absolute;
+            top: 50px;
+            left: -100%;
+        }
+        
+        nav a {
+            display: block;
+            text-decoration: none;
+            color: #a6e22e;
+            padding: 10px 20px;
+            border-bottom: 1px solid #a6e22e;
+        }
+        
+        #menu {
+            position: absolute;
+        }
+        
+        #menu:checked~.header nav {
+            left: 0;
+        }
+        
+        .two .item {
+            display: flex;
+            margin: 0;
+        }
+        
+        .two .item .pic,
+        .two .item .text {
+            width: 50%;
+            margin: 0;
+        }
+        
+        .two .item .text {
+            display: flex;
+            padding: 0 10px;
+            box-sizing: border-box;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        @media screen and (min-width:768px) {
+            .btn {
+                display: none;
+            }
+            .header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            nav {
+                position: relative;
+                left: 0;
+                display: flex;
+                width: auto;
+                height: auto;
+                top: 0;
+                background-color: transparent;
+            }
+            nav a {
+                border-bottom: none;
+            }
+        }
+        
+        img {
+            vertical-align: bottom;
+        }
+        
+        .item-group {
+            width: 100%;
+            max-width: 1400px;
+            margin: auto;
+        }
+        
+        .bg img {
+            width: 100%;
+        }
+        
+        .footer {
+            background-color: #333;
+            color: #aaa;
+            text-align: center;
+            padding: 10px 0;
+        }
+        
+        .title h2 {
+            text-align: center;
+            font-size: 46px;
+        }
+        
+        .title {
+            margin: 0 0px 10px;
+            padding: 20px 10px;
+            background-color: #ccc;
+        }
+        
+        .title p {
+            font-size: 22px;
+            text-align: center;
+        }
+        
+        .item .text h3 {
+            font-size: 24px;
+            text-align: center;
+        }
+        
+        .item .pic img {
+            width: 100%;
+        }
+        
+        .two {
+            margin: 60px 0;
+            background-color: #ffa;
+        }
+        
+        @media screen and (min-width:768px) {
+            .item-group {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <input type="checkbox" name="" id="menu">
+
+    <div class="header">
+        <h1 class="logo">
+            <a href="#"><img src="https://picsum.photos/60/40?random=1">
+        </h1>
+        <label for="menu" class="btn"> 
+            <span>選單</span>
+        </label>
+        <nav>
+            <a href="#">link</a>
+            <a href="#">link</a>
+            <a href="#">link</a>
+        </nav>
+    </div>
+
+    <div class="bg">
+        <img src=https://picsum.photos/300/200?random=1>
+    </div>
+
+    <div class="about">
+        <div class="wrap">
+            <div class="title">
+                <h2>關於我們</h2>
+                <p></p>
+            </div>
+            <div class="item-group">
+                <div class="item">
+                    <div class="pic">
+                        <img src="https://picsum.photos/300/200?random=2">
+                    </div>
+                    <div class="text">
+                        <h3>title</h3>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pic">
+                        <img src="https://picsum.photos/300/200?random=3">
+                    </div>
+                    <div class="text">
+                        <h3>title</h3>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pic">
+                        <img src="https://picsum.photos/300/200?random=4">
+                    </div>
+                    <div class="text">
+                        <h3>title</h3>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="two">
+        <div class="wrap">
+            <div class="item-group">
+                <div class="item">
+                    <div class="pic">
+                        <img src="https://picsum.photos/id/684/600/400">
+                    </div>
+                    <div class="text">
+                        <h3>title</h3>
+                        <p>哈囉你好嗎衷心感謝珍重再見期待再相逢</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        &copy; copyright 2020 by css
+    </div>
+
+
+
+
+
+
+
+</body>
+
+</html>
